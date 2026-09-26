@@ -1,0 +1,22 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+.main {
+  padding: 32px;
+  background: var(--bg);
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;   /* sidebar выходит из потока */
+  }
+
+  .main {
+    padding: 16px;
+    padding-top: 72px;   /* место для бургера */
+  }
+}

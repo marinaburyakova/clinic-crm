@@ -1,0 +1,14 @@
+.backdrop {
+  display: none;   /* по умолчанию скрыт */
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+  .backdrop {
+    display: block;
+  }
+}

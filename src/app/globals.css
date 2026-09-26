@@ -1,0 +1,77 @@
+:root {
+  /* Тёмная тема (по умолчанию) */
+  --bg: #0a0a0a;
+  --bg-elevated: #141414;
+  --bg-card: #1a1a1a;
+  --text: #ffffff;
+  --text-muted: #999999;
+  --text-dim: #666666;
+  --border: #2a2a2a;
+  --accent: #FD6F00;
+  --accent-hover: #FF8533;
+  --danger: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+:root[data-theme='light'] {
+  /* Светлая тема для мед-системы */
+  --bg: #f8fafc;
+  --bg-elevated: #ffffff;
+  --bg-card: #f1f5f9;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --border: #e2e8f0;
+
+  /* Мед-стиль: зелёный + голубой */
+  --accent: #028bb4;
+  --accent-hover: #10b981;
+  --danger: #dc2626;
+  --success: #059669;
+  --warning: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,109 @@
+.calendar {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.day:hover {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.dayOutside {
+  opacity: 0.35;
+}
+
+.dayToday {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  font-weight: 700;
+}
+
+.dayToday .dayNumber {
+  color: var(--accent);
+}
+
+.daySelected {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  border-width: 2px;
+}
+
+.daySelected:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.daySelected .dayNumber {
+  color: #fff;
+}
+
+.dayNumber {
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .calendar {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .day {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .calendar {
+    padding: 8px;
+    max-width: none;
+  }
+
+  .weekday {
+    font-size: 10px;
+    padding: 4px 0;
+  }
+
+  .day {
+    font-size: 12px;
+  }
+}

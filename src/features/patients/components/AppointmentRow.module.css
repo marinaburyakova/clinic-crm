@@ -1,0 +1,54 @@
+.row {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.past {
+  opacity: 0.6;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dateDay {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.dateTime {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.doctor {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.notes {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.duration {
+  font-size: 13px;
+  color: var(--text-dim);
+  text-align: right;
+}

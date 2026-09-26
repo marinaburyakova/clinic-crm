@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Оранжевый градиент для круга -->
+    <linearGradient id="md-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#984300" />
+      <stop offset="46%" stop-color="#FD6F00" />
+      <stop offset="100%" stop-color="#CA5900" />
+    </linearGradient>
+
+    <!-- Тёмно-серый градиент для букв -->
+    <linearGradient id="md-text-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A" />
+      <stop offset="50%" stop-color="#4A4A4A" />
+      <stop offset="100%" stop-color="#2E2E2E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Круг с полной заливкой оранжевым градиентом -->
+  <circle
+    cx="256"
+    cy="256"
+    r="248"
+    fill="url(#md-gradient)"
+  />
+
+  <!-- Заглавная M -->
+  <text
+    x="50%"
+    y="44%"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    font-size="240"
+    font-weight="900"
+    fill="url(#md-text-gradient)"
+    text-anchor="middle"
+    dominant-baseline="central"
+    letter-spacing="-8"
+  >
+    C
+  </text>
+
+  <!-- Маленькое dev -->
+  <text
+    x="50%"
+    y="72%"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    font-size="110"
+    font-weight="700"
+    fill="url(#md-text-gradient)"
+    text-anchor="middle"
+    dominant-baseline="central"
+    letter-spacing="6"
+  >
+    crm
+  </text>
+</svg>
