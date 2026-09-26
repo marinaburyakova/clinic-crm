@@ -1,5 +1,7 @@
 # Clinic CRM
 
+![CI](https://github.com/marinaburyakova/clinic-crm/actions/workflows/ci.yml/badge.svg)
+
 A modern clinic management system for doctors and administrators. Built with **Next.js 16**, **React 19**, **PostgreSQL**, and **Prisma 7**.
 
 ## Screenshots
@@ -96,30 +98,35 @@ Code is grouped by feature (`features/appointments`, `features/patients`, `featu
 
 
 ## Roadmap
-# Testing & CI
-□ Unit tests for Server Actions — Vitest
-□ E2E test for the auth flow — Playwright
-□ GitHub Actions CI: lint + typecheck + build on every PR
-UX
-□ Appointment count indicators in calendar — currently the calendar shows only day numbers. Reintroduce subtle dot indicators or a small count badge on days with appointments (removed for MVP to avoid layout issues on narrow screens)
-□ Theme mode "system" — three states (light / dark / follow OS) with matchMedia listener
-□ Notification store (Zustand) — persistent badge in the sidebar for failed operations (currently only console.error on optimistic rollback)
-□ Roving tabindex for calendar — WAI-ARIA grid pattern: arrow-key navigation, Enter to select, focus across month boundaries
-□ Edit appointment — currently only create + delete
-□ Delete patient — with a cascade confirmation dialog
-□ Doctor avatars across the app — in the sidebar (32×32), on appointment rows
-Architecture
-□ Avatar upload — replace static /public/avatars/ with real upload to S3-compatible storage, with image resize and validation
-□ Edit profile — form to update name, specialty, bio, avatar
-□ Admin view for /appointments — currently shows only the current doctor's schedule. Admins should see all doctors grouped, with a ?doctor=id filter
-□ Audit log — who created / changed / deleted what, and when (regulatory requirement)
-□ Rate limiting on login — currently none; required for production
-Long-term
-□ Multi-clinic support — Clinic model, per-clinic timezone, per-clinic data isolation
-□ Patient portal — patients log in and see their appointments
-□ Notifications — email / SMS to patients when appointments change
-□ Medical records — HL7 / FHIR compatible storage
-□ Reporting — doctor load, patient flow, revenue analytics
+
+### Testing & CI
+- [ ] Unit tests for Server Actions — Vitest
+- [ ] E2E test for the auth flow — Playwright
+- [x] GitHub Actions CI: lint + typecheck + build on every PR
+
+### UX
+- [ ] Appointment count indicators in calendar
+- [ ] Theme mode "system" — light / dark / follow OS
+- [ ] Notification store (Zustand) — persistent badge for failed operations
+- [ ] Roving tabindex for calendar — WAI-ARIA grid pattern
+- [ ] Edit appointment
+- [ ] Delete patient — with cascade confirmation
+- [ ] Doctor avatars across the app
+
+### Architecture
+- [ ] Avatar upload — S3-compatible storage
+- [ ] Edit profile — name, specialty, bio, avatar
+- [ ] Admin view for `/appointments` — all doctors grouped, `?doctor=id` filter
+- [ ] Audit log — who changed what, when
+- [ ] Rate limiting on login
+
+### Long-term
+- [ ] Multi-clinic support — Clinic model, per-clinic timezone
+- [ ] Patient portal
+- [ ] Notifications — email / SMS
+- [ ] Medical records — HL7 / FHIR
+- [ ] Reporting — doctor load, patient flow, revenue
+
 ## Author
 # Marina Dev — Fullstack Developer
 
