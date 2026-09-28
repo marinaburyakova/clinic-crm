@@ -31,16 +31,13 @@
 }
 
 @media (max-width: 640px) {
-  .row {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
+ 
 
   .card {
-    padding: 16px;
+    padding: 10px;
   }
 
   .value {
-    font-size: 26px;
+    font-size: 20px;
   }
 }

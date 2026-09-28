@@ -21,7 +21,6 @@ export default function Sidebar({ user }: SidebarProps) {
   const isOpen = useSidebarStore((s) => s.isOpen)
   const close = useSidebarStore((s) => s.close)
 
-  // Закрытие по Escape
   useEffect(() => {
     if (!isOpen) return
 

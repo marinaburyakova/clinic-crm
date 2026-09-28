@@ -38,8 +38,8 @@ export default function ProfileCard({ user }: ProfileCardProps) {
           <Image
             src={user.avatarUrl}
             alt={user.name}
-            width={140}
-            height={140}
+            width={200}
+            height={200}
             className={styles.photo}
             priority
           />

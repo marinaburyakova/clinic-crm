@@ -4,7 +4,6 @@ import LoginForm from '@/components/forms/LoginForm'
 import styles from './login.module.css'
 
 export default async function LoginPage() {
-  // Уже залогинен — редирект
   const user = await getCurrentUser()
   if (user) {
     redirect('/dashboard')

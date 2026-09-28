@@ -12,11 +12,11 @@
 
 @media (max-width: 768px) {
   .layout {
-    grid-template-columns: 1fr;   /* sidebar выходит из потока */
+    grid-template-columns: 1fr;
   }
 
   .main {
     padding: 16px;
-    padding-top: 72px;   /* место для бургера */
+    padding-top: 72px;
   }
 }

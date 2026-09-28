@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  flex: 1;
+  flex: .5;
 }
 
 .link {
@@ -91,7 +91,6 @@
   color: var(--danger);
 }
 
-/* Мобильные */
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;

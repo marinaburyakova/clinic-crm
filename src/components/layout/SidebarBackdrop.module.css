@@ -1,5 +1,5 @@
 .backdrop {
-  display: none;   /* по умолчанию скрыт */
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 95;

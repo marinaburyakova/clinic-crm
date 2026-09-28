@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: 'Clinic management system for doctors and administrators.',
 }
 
-// Код минимизирован и защищен от кривого JSON в localStorage
 const themeScript = `
   (function() {
     try {
@@ -34,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Стандартный тег script в head работает железно для таких задач */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>

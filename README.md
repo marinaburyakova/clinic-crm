@@ -8,7 +8,7 @@ A modern clinic management system for doctors and administrators. Built with **N
 
 ### Dashboard — doctor view
 
-![Dashboard — light theme with doctor profile and daily stats](./public/screenshots/dashboard.png)
+![Dashboard — light theme with doctor profile and daily stats](./public/screenshots/dashboard-light.png)
 
 ### Dashboard — another doctor, dark theme
 
