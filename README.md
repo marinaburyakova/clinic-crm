@@ -26,8 +26,6 @@ A modern clinic management system for doctors and administrators. Built with **N
 
 ![Mobile view — sidebar overlay with hamburger menu](./public/screenshots/mobile.png)
 
-
-
 ## Features
 
 - **Authentication** — JWT in httpOnly cookies, bcrypt password hashing, middleware-protected routes
@@ -41,18 +39,18 @@ A modern clinic management system for doctors and administrators. Built with **N
 
 ## Tech Stack
 
-| Layer | Tech |
-|---|---|
-| Framework | Next.js 16 (App Router) |
-| UI | React 19 |
-| Language | TypeScript (strict) |
-| Database | PostgreSQL 16 |
-| ORM | Prisma 7 with `@prisma/adapter-pg` |
-| Auth | JWT (`jose`) + `bcryptjs` |
-| Validation | Zod |
-| Styling | CSS Modules |
-| Client state | Zustand (theme, sidebar) |
-| Dev tools | Docker, Prisma Studio |
+| Layer        | Tech                               |
+| ------------ | ---------------------------------- |
+| Framework    | Next.js 16 (App Router)            |
+| UI           | React 19                           |
+| Language     | TypeScript (strict)                |
+| Database     | PostgreSQL 16                      |
+| ORM          | Prisma 7 with `@prisma/adapter-pg` |
+| Auth         | JWT (`jose`) + `bcryptjs`          |
+| Validation   | Zod                                |
+| Styling      | CSS Modules                        |
+| Client state | Zustand (theme, sidebar)           |
+| Dev tools    | Docker, Prisma Studio              |
 
 ## Architecture Decisions
 
@@ -96,15 +94,16 @@ Deleting an appointment:
 
 Code is grouped by feature (`features/appointments`, `features/patients`, `features/dashboard`), not by layer. Each feature owns its `queries.ts`, `actions.ts`, and `components/`. Easier to navigate, easier to remove when a feature is dropped.
 
-
 ## Roadmap
 
 ### Testing & CI
+
 - [ ] Unit tests for Server Actions — Vitest
 - [ ] E2E test for the auth flow — Playwright
 - [x] GitHub Actions CI: lint + typecheck + build on every PR
 
 ### UX
+
 - [ ] Appointment count indicators in calendar
 - [ ] Theme mode "system" — light / dark / follow OS
 - [ ] Notification store (Zustand) — persistent badge for failed operations
@@ -114,6 +113,7 @@ Code is grouped by feature (`features/appointments`, `features/patients`, `featu
 - [ ] Doctor avatars across the app
 
 ### Architecture
+
 - [ ] Avatar upload — S3-compatible storage
 - [ ] Edit profile — name, specialty, bio, avatar
 - [ ] Admin view for `/appointments` — all doctors grouped, `?doctor=id` filter
@@ -121,6 +121,7 @@ Code is grouped by feature (`features/appointments`, `features/patients`, `featu
 - [ ] Rate limiting on login
 
 ### Long-term
+
 - [ ] Multi-clinic support — Clinic model, per-clinic timezone
 - [ ] Patient portal
 - [ ] Notifications — email / SMS
@@ -128,8 +129,9 @@ Code is grouped by feature (`features/appointments`, `features/patients`, `featu
 - [ ] Reporting — doctor load, patient flow, revenue
 
 ## Author
+
 # Marina Dev — Fullstack Developer
 
 GitHub: @marinaburyakova
 
-Portfolio: mint-apps.com
+Portfolio: https://portfolio.mint-apps.com/
