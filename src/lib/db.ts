@@ -7,19 +7,28 @@ const globalForPrisma = globalThis as unknown as {
   pgPool: pg.Pool | undefined
 }
 
-function getPrismaClient() {
-  if (!globalForPrisma.pgPool) {
-    globalForPrisma.pgPool = new pg.Pool({
-      connectionString: process.env.DATABASE_URL!,
-      max: 10,
-    })
-  }
+if (!globalForPrisma.pgPool) {
+  globalForPrisma.pgPool = new pg.Pool({
+    connectionString: process.env.DATABASE_URL!,
+    max: 10,
+    idleTimeoutMillis: 30_000,
+    connectionTimeoutMillis: 5_000,
+  })
 
-  const adapter = new PrismaPg(globalForPrisma.pgPool)
-  return new PrismaClient({ adapter })
+  globalForPrisma.pgPool.on('error', (err) => {
+    console.error('[PG Pool] Unexpected error:', err)
+  })
 }
 
-export const prisma = globalForPrisma.prisma ?? getPrismaClient()
+export const prisma =
+  globalForPrisma.prisma ??
+  new PrismaClient({
+    adapter: new PrismaPg(globalForPrisma.pgPool),
+    log:
+      process.env.NODE_ENV === 'development'
+        ? ['query', 'warn', 'error']
+        : ['error'],
+  })
 
 if (process.env.NODE_ENV !== 'production') {
   globalForPrisma.prisma = prisma

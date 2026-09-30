@@ -12,7 +12,7 @@ A modern clinic management system for doctors and administrators. Built with **N
 
 ### Dashboard — another doctor, dark theme
 
-![Dashboard — dark theme, different doctor](./public/screenshots/dashboard-dark.png)
+![Dashboard — dark theme, different doctor](./public/screenshots/dashboard-dark_mobil.png)
 
 ### Appointments — month calendar and daily schedule
 
